@@ -18,7 +18,14 @@ def analizar_lista(nums):
 
 def area_rect(base, altura): return base * altura
 def perimetro_rect(base, altura): return 2 * (base + altura)
-def es_primo(n): return n > 1 and all(n % i for i in range(2, int(n**0.5) + 1))
+def es_primo(numero):
+
+  if numero <= 1:
+    return False
+  for i in range(2, int(numero**0.5) + 1):
+    if numero % i == 0:
+      return False
+  return True
 
 saludar()
 
